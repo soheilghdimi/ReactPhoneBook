@@ -2,7 +2,7 @@ import './App.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import ContactList from "./Components/ContactList/ContactList";
 import ContactForm from "./Components/ContactForm/ContactsForm";
-import ContactContextProvider from "./Components/Context/Context";
+import ContactContextProvider from "./Components/ContactContext/Context";
 import {useState} from "react";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         <ContactContextProvider>
             <BrowserRouter>
                 <Routes>
-                    <Route path={"/"} element={<ContactList user={user} setUser={setUser} setMood={setMood}/>}/>
+                    <Route path={"/"} element={<ContactList setUser={setUser} setMood={setMood}/>}/>
                     <Route path={"Form"} element={<ContactForm user={user} setUser={setUser} mood={mood} setMood={setMood}/>}>
                     </Route>
                 </Routes>

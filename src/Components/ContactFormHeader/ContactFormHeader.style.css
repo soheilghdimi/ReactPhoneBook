@@ -1,0 +1,23 @@
+.hero{
+    color: #48494a;
+    background: linear-gradient(90deg, rgb(216, 227, 218) 0%, rgb(193, 210, 167) 100%);
+    padding: 1em 0;
+}
+.back-btn{
+    color: #48494a;
+    font-size: 1.7em;
+    padding-left: 1em;
+}
+.hero-info{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-size: 22px;
+}
+.relationship-hero{
+    width: 5em;
+    text-align: center;
+    padding: .4em .5em;
+    border-radius: 100px;
+    margin: 0;
+}

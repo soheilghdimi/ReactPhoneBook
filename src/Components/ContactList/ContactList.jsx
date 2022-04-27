@@ -1,26 +1,38 @@
 import './ContactList.style.css'
-import {ContactContext} from "../Context/Context";
+import {ContactContext} from "../ContactContext/Context";
 import {useContext, useState} from "react";
 import {Link} from "react-router-dom";
 
 const ContactList = ({setUser, setMood}) => {
-    const {users, setUsers} = useContext(ContactContext)
+    const {users, dispatch} = useContext(ContactContext)
     const [search, setSearch] = useState("")
     const handleDeleteUsers = (id) => {
-        setUsers(users.filter(item => item.id !== id))
+        dispatch({type: "handleDeleteUsers", payload: {id}})
     }
     return (
         <div className='container'>
             <header className="header">
-                <form className="search-bar">
-                    <input onChange={(event) => {
-                        setSearch(event.target.value)
-                    }}
-                           type="search-name" className="contact-search" name="search-area" placeholder="Search"/>
-                </form>
-                <Link to={'Form'}>
-                    <i className="fas fa-plus-circle add" style={{color: "white", fontSize: "30px"}}>{}</i>
-                </Link>
+                <div className={"title"}>
+                    <h1 style={{color: "rgba(114,119,126,0.84)"}}>PhoneBook</h1>
+                    <Link to={'Form'}>
+                        <i className="fas fa-plus-circle add" style={{color: "#474849", fontSize: "30px"}}>{}</i>
+                    </Link>
+                </div>
+                <div className={"search"}>
+                    <div className="box">
+                        <form name="search">
+                            <input type="text" className="input" name="txt"
+                                // onMouseOut={() => {
+                                //     document.search.txt.value="" ;
+                                // }}
+                                   onChange={(event) => {
+                                       setSearch(event.target.value)
+                                   }}/>
+                        </form>
+                        <i className="fas fa-search"></i>
+                    </div>
+                </div>
+
             </header>
             {
                 users.filter(user => user.fullName.toLowerCase().includes(search.toLowerCase())).length !== 0 ?
@@ -36,9 +48,15 @@ const ContactList = ({setUser, setMood}) => {
                                     <li className="list__item">
                                         {/*delete button*/}
                                         <button className="button"
-                                                onClick={() => handleDeleteUsers(item.id)}>
+                                                onClick={() => {
+                                                    if (window.confirm('Are you sure you want to delete this Contact?')) {
+                                                        handleDeleteUsers(item.id)
+                                                    }
+                                                }
+                                                }>
                                             <i className="fas fa-trash icon-gradient">{}</i>
                                         </button>
+
                                         {/*\edit button*/}
                                         <Link to={"Form"}>
                                             <button className="button" onClick={() => {

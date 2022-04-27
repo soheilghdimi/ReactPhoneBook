@@ -5,21 +5,59 @@
     height: 100vh;
 }
 .header{
-    display: flex;
-    justify-content: space-evenly;
-    color: #fff;
-    background: linear-gradient(90deg, rgba(111,177,127,1) 0%, rgba(154,173,89,1) 100%);
-    padding: 2em 0;
-    align-items: center;
-}
-.contact-search{
-    font-size: 1.2em;
-    padding:.3em .3em;
-    border-radius: 100px;
-    border:1px solid white;
-    outline: none;
-    width: 350px;
     text-align: center;
+    color: #fff;
+    background: linear-gradient(90deg, rgb(216, 227, 218) 0%, rgb(193, 210, 167) 100%);
+    padding: 1em 0 3em ;
+    align-items: center;
+    border-radius: 5px;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px 0 15px;
+}
+.search{
+    display: flex;
+    justify-content:center;
+}
+.box{
+    position: absolute;
+    top: 11%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.input {
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    background: none;
+    border: 4px solid #474849;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: 26px;
+    color: #efefed;
+    outline: none;
+    transition: .5s;
+}
+.box:hover input{
+    width: 350px;
+    background: #75A85E;
+    border-radius: 10px;
+}
+.box i{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 26px;
+    color: #474849;
+    transition: .2s;
+    z-index: 2;
+}
+.box:hover i{
+    opacity: 0;
+    z-index: -1;
 }
 .contact-name{
     color: #fff;
@@ -28,7 +66,8 @@
 ul{
     margin: 0;
     padding: 0;
-    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .list__item{
     list-style: none;
@@ -44,21 +83,32 @@ ul{
     margin-bottom: 10px;
 }
 .contact-section{
+    width: 97%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1.5em;
     transition: 0.3s;
     background-color: #313438;
+    border-radius: 8px;
+    margin: 1px;
 }
 .contact-section:hover{
     background-color: #48494a;
     z-index: 100;
 }
-
 @media only screen and (min-width: 800px){
     .container{
         min-width: 800px;
         max-width: 1000px;
+    }
+    .header{
+        padding: 1em 0;
+    }
+    .box{
+        position: absolute;
+        top: 8%;
+        left: 50%;
+        transform: translate(-50%,-50%);
     }
 }

@@ -1,20 +1,21 @@
 import './ContactForm.style.css'
-import {makeUniqueId} from "../data";
 import {useContext} from "react";
-import {ContactContext} from "../Context/Context";
+import {ContactContext} from "../ContactContext/Context";
 import {Link} from "react-router-dom";
+import {ContactFormHeader} from "../ContactFormHeader/ContactFormHeader";
 
 const ContactForm = ({user, setUser, mood, setMood}) => {
-    const {users, setUsers} = useContext(ContactContext)
+    const {dispatch} = useContext(ContactContext)
+
     const handleAddAndEdit = (e) => {
         e.preventDefault();
         if (user.fullName === "" || user.number === "" || user.group === "") {
             alert("please fill the inputs")
         } else {
             if (mood === "Edit") {
-                setUsers(users.map(oldUser => user.id === oldUser.id ? user : oldUser))
+                dispatch({type: "HandleEdit", payload: {user}});
             } else {
-                setUsers([...users, {id: makeUniqueId(), ...user}])
+                dispatch({type: "HandleAdd", payload: {user}})
             }
             setUser({fullName: '', number: "", group: ""})
             setMood("Add Contact")
@@ -26,16 +27,7 @@ const ContactForm = ({user, setUser, mood, setMood}) => {
 
     return (
         <div className={'container'}>
-            <header className="hero">
-                <Link to="/">
-                    <i className="fas fa-chevron-circle-left back-btn">{}</i>
-                </Link>
-                <div className="hero-info">
-                    <h1>Full Name:{user.fullName}</h1>
-                    <h4>Number:{user.number}</h4>
-                    <p className="relationship-hero">Group:{user.group}</p>
-                </div>
-            </header>
+            <ContactFormHeader user={user} setUser={setUser}/>
             <form className="contact-info">
                 <div className="info-line">
                     <i className="fas fa-phone icon-gradient">{}</i>
@@ -62,7 +54,7 @@ const ContactForm = ({user, setUser, mood, setMood}) => {
                     <div className="update-contact">
                         <i className="fas fa-check-circle icon-gradient">{}</i>
                         <button onClick={handleAddAndEdit} className="button">
-                            <Link to='/' style={{textDecoration:'none',color:"#6a89a1"}}  >{mood}</Link>
+                            <Link to='/' style={{textDecoration: 'none', color: "#6a89a1"}}>{mood}</Link>
                         </button>
                     </div>
                 </section>

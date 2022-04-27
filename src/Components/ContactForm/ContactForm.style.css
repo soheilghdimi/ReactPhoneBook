@@ -1,38 +1,14 @@
 *, *::before, *::after {
     box-sizing: border-box;
 }
-body{
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-}
 a{
     text-decoration: none;
 }
-.hero{
-    color: white;
-    background: linear-gradient(90deg, rgba(111,177,127,1) 0%, rgba(154,173,89,1) 100%);
-    padding: 1em 0;
-}
-.back-btn{
-    color: #fff;
-    font-size: 1.7em;
-    padding-left: 1em;
-}
 .contact-info{
+    margin-top: -4px;
     padding: 1.5em;
     background-color: #313438;
-}
-.hero-info{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-}
-.relationship-hero{
-    width: 5em;
-    text-align: center;
-    padding: .4em .5em;
-    border-radius: 100px;
-    margin: 0;
+    border-radius: 8px;
 }
 .friend{
     background-color: #75A85E;
@@ -91,8 +67,8 @@ p{
     -6px -6px 12px #35393d;
 }
 .button{
-    background-color: #313438;
-    border: none;
+    background:none ;
+    border:none;
     color: #fff;
     font-size: 1.3em;
     padding-left: .6em;
