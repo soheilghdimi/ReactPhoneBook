@@ -1,37 +1,36 @@
-.container{
+.container {
     min-width: 400px;
     max-width: 500px;
     margin: 0 auto;
     height: 100vh;
 }
-.header{
+
+.header {
     text-align: center;
     color: #fff;
     background: linear-gradient(90deg, rgb(216, 227, 218) 0%, rgb(193, 210, 167) 100%);
-    padding: 1em 0 3em ;
+    padding: 1em 0 3em;
     align-items: center;
     border-radius: 5px;
 }
-.title{
+
+.title {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 10px 0 15px;
 }
-.search{
-    display: flex;
-    justify-content:center;
-}
-.box{
+.box {
     position: absolute;
     top: 14%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
+
 .input {
     padding: 10px;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background: none;
     border: 4px solid #474849;
     border-radius: 50px;
@@ -41,38 +40,45 @@
     outline: none;
     transition: .5s;
 }
-.box:hover input{
+
+.box:hover input {
     width: 350px;
     background: #75A85E;
     border-radius: 10px;
 }
-.box i{
+
+.box i {
     position: absolute;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     font-size: 26px;
     color: #474849;
     transition: .2s;
     z-index: 2;
 }
-.box:hover i{
+
+.box:hover i {
     opacity: 0;
     z-index: -1;
 }
-.contact-name{
+
+.contact-name {
     color: #fff;
     font-size: 1.2em;
 }
-ul{
+
+ul {
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
 }
-.list__item{
+
+.list__item {
     list-style: none;
 }
-.relationship{
+
+.relationship {
     color: #fff;
     width: 6em;
     text-align: center;
@@ -81,34 +87,44 @@ ul{
     background-color: #75A85E;
     margin-top: 8px;
     margin-bottom: 10px;
+    cursor: default;
 }
-.contact-section{
+
+.contact-section {
     width: 97%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1.5em;
+    padding: 0 1em;
     transition: 0.3s;
-    background-color: #313438;
-    border-radius: 8px;
-    margin: 1px;
 }
-.contact-section:hover{
-    background-color: #48494a;
-    z-index: 100;
+
+.contacts-list {
+    border-radius: 10px;
+    margin: 5px;
+    background-color: #2d3541;
 }
-@media only screen and (min-width: 800px){
-    .container{
+.contacts-list:nth-child(odd) {
+    background-color: #333d52;
+}
+.contacts-list:hover {
+    background-color: #464849;
+}
+
+@media only screen and (min-width: 800px) {
+    .container {
         min-width: 800px;
         max-width: 1000px;
     }
-    .header{
+
+    .header {
         padding: 1em 0;
     }
-    .box{
+
+    .box {
         position: absolute;
         top: 10%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
 }

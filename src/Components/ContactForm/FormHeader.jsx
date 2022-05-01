@@ -1,6 +1,9 @@
 import {Link} from "react-router-dom";
-import "./ContactFormHeader.style.css"
-export const ContactFormHeader = ({user, setUser}) => {
+import "./FormHeader.style.css"
+import {useContext} from "react";
+import {ContactUserContext} from "../ContactContext/UserContext";
+export const FormHeader = () => {
+    const {user}=useContext(ContactUserContext)
     return (
         <header className="hero">
             <Link to="/">
