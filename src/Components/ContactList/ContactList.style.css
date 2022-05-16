@@ -3,6 +3,7 @@
     max-width: 500px;
     margin: 0 auto;
     height: 100vh;
+    font-size: .8rem;
 }
 
 .header {
@@ -20,17 +21,20 @@
     align-items: center;
     margin: 0 10px 0 15px;
 }
-.box {
-    position: absolute;
-    top: 14%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+
+.search-box {
+    position: relative;
+    margin-bottom: -30px;
 }
 
 .input {
-    padding: 10px;
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     background: none;
     border: 4px solid #474849;
     border-radius: 50px;
@@ -41,25 +45,39 @@
     transition: .5s;
 }
 
-.box:hover input {
+.search-box:hover input {
     width: 350px;
     background: #75A85E;
     border-radius: 10px;
 }
 
-.box i {
+.search-box i {
     position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 26px;
+    font-size: 17px;
     color: #474849;
     transition: .2s;
     z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: 25%;
 }
 
-.box:hover i {
+.search-box:hover i {
     opacity: 0;
     z-index: -1;
+}
+
+.dot {
+    height: 55px;
+    width: 55px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: black;
 }
 
 .contact-name {
@@ -76,6 +94,8 @@ ul {
 
 .list__item {
     list-style: none;
+    display: flex;
+    align-items: center;
 }
 
 .relationship {
@@ -90,6 +110,10 @@ ul {
     cursor: default;
 }
 
+.info {
+    width: 25px;
+}
+
 .contact-section {
     width: 97%;
     display: flex;
@@ -101,12 +125,14 @@ ul {
 
 .contacts-list {
     border-radius: 10px;
-    margin: 5px;
+    margin: 2px;
     background-color: #2d3541;
 }
+
 .contacts-list:nth-child(odd) {
     background-color: #333d52;
 }
+
 .contacts-list:hover {
     background-color: #464849;
 }
@@ -115,16 +141,30 @@ ul {
     .container {
         min-width: 800px;
         max-width: 1000px;
+        font-size: 1.1rem;
     }
 
     .header {
         padding: 1em 0;
     }
 
-    .box {
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    .search-box {
+        margin-bottom: 0;
+    }
+
+    .input {
+        width: 50px;
+        height: 50px;
+    }
+
+    .search-box i {
+        font-size: 26px;
+    }
+
+    .title {
+        margin-top: -40px;
+    }
+    .info {
+        width: 35px;
     }
 }

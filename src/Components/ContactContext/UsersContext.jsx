@@ -7,7 +7,7 @@ export const ContactUsersContext = createContext({
 })
 
 function ContactContextProvider({children}) {
-    const [users, dispatch] = useReducer(Reducer,contactUsersList)
+    const [users, dispatch] = useReducer(Reducer,contactUsersList.sort())
     return (
         <ContactUsersContext.Provider value={{users, dispatch}}>
             {children}

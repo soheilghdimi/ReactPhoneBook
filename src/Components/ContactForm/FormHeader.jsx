@@ -9,7 +9,7 @@ export const FormHeader = () => {
             <Link to="/">
                 <i className="fas fa-chevron-circle-left back-btn">{}</i>
             </Link>
-            <div className="hero-info">
+            <div className="person-info">
                 <h2>{user.fullName}</h2>
                 <h3>{user.number}</h3>
                 <p className="relationship-hero">{user.group}</p>

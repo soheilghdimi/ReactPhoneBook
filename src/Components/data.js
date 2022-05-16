@@ -1,23 +1,53 @@
-export const contactUsersList = [
+const initialData = [
     {
         id: 1,
-        fullName: "Soheil ghadimi",
+        fullName: "Soheil Ghadimi",
         number: "+989373282324",
-        group: "friends"
+        group: "friends",
     },
     {
         id: 2,
-        fullName: "Hamid ghadimi",
+        fullName: "Hamid Ghadimi",
         number: "+989373282324",
-        group: "work"
+        group: "work",
     },
     {
         id: 3,
-        fullName: "Vahid ghadimi",
+        fullName: "Vahid Ghadimi",
         number: "+989373282324",
-        group: "family"
+        group: "family",
+    },
+    {
+        id: 4,
+        fullName: "Ali Ghadimi",
+        number: "+989373282324",
+        group: "family",
+    },
+    {
+        id: 5,
+        fullName: "Bahram Ghadimi",
+        number: "+989373282324",
+        group: "family",
+    },
+    {
+        id: 6,
+        fullName: "Gholi Ghadimi",
+        number: "+989373282324",
+        group: "family",
     },
 ]
+export const contactUsersList = initialData.sort((a, b) => {
+    let fa = a.fullName.toLowerCase(),
+        fb = b.fullName.toLowerCase();
+
+    if (fa < fb) {
+        return -1;
+    }
+    if (fa > fb) {
+        return 1;
+    }
+    return 0;
+});
 
 export const makeUniqueId = () => {
     return parseInt(100 * Math.random())

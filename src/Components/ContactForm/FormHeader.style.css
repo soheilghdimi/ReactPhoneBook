@@ -1,6 +1,6 @@
 .hero{
     color: #48494a;
-    background: linear-gradient(90deg, rgb(216, 227, 218) 0%, rgb(193, 210, 167) 100%);
+    background: linear-gradient(90deg, rgb(231, 238, 231) 0%, rgb(227, 232, 219) 100%);
     padding: 1em 0;
 }
 .back-btn{
@@ -8,7 +8,7 @@
     font-size: 1.7em;
     padding-left: 1em;
 }
-.hero-info{
+.person-info{
     display: flex;
     flex-flow: column;
     align-items: center;

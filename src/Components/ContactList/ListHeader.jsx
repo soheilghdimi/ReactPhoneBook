@@ -9,18 +9,21 @@ export const ListHeader = ({setSearch}) => {
                     <i className="fas fa-plus-circle add" style={{color: "#474849", fontSize: "30px"}}>{}</i>
                 </Link>
             </div>
-            <div className="box">
-                <form>
-                    <input type="text" className="input" name="txt"
-                        // onMouseOut={() => {
-                        //     document.search.txt.value="" ;
-                        // }}
-                           onChange={(event) => {
-                               setSearch(event.target.value)
-                           }}/>
-                </form>
-                <i className="fas fa-search"></i>
+            <div className="search-container">
+                <div className="search-box">
+                    <form>
+                        <input type="text" className="input" name="txt"
+                            // onMouseOut={() => {
+                            //     document.search.txt.value="" ;
+                            // }}
+                               onChange={(event) => {
+                                   setSearch(event.target.value)
+                               }}/>
+                    </form>
+                    <i className="fas fa-search"></i>
+                </div>
             </div>
+
         </header>
     )
 }
