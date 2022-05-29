@@ -6,7 +6,7 @@ export const ListHeader = ({setSearch}) => {
             <div className={"title"}>
                 <h1 style={{color: "rgba(114,119,126,0.84)"}}>PhoneBook</h1>
                 <Link to={'Form'}>
-                    <i className="fas fa-plus-circle add" style={{color: "#474849", fontSize: "30px"}}>{}</i>
+                    <i className="fas fa-plus-circle add" >{}</i>
                 </Link>
             </div>
             <div className="search-container">

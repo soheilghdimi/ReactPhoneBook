@@ -1,77 +1,126 @@
 *, *::before, *::after {
     box-sizing: border-box;
 }
-a{
+
+a {
     text-decoration: none;
 }
-.contact-info{
+
+.back-btn {
+    color: #0a213b;
+    font-size: 1.7em;
+}
+
+.contact-info {
     margin-top: -4px;
-    padding: 1.5em;
-    background-color: #313438;
+    padding: 1em .5em;
+    background-color: #e8dede;
     border-radius: 8px;
+    height: 99vh;
 }
-.friend{
-    background-color: #75A85E;
-}
-.info-line{
+
+.info-line {
     display: flex;
     color: #fff;
-    width: 90%;
-    padding: 1em 2em;
-    margin-top: 2em;
-    border-radius: 20px;
-    box-shadow: inset 6px 6px 12px #2d2f33,
-    inset -6px -6px 12px #35393d;
+    padding: .5em;
+    margin-top: 3em;
+    border-radius: 10px;
+    border: 1px solid #0a1d38;
 }
-/*p{*/
-/*    margin: 0;*/
-/*    padding-left: 2em;*/
-/*}*/
-.notFound{
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notFound {
     padding-top: 5em;
     display: flex;
     justify-content: center;
     font-size: 30px;
 }
-.icon-gradient{
-    background: linear-gradient(90deg, rgba(111,177,127,1) 0%, rgba(154,173,89,1) 100%);
+
+.icon-gradient {
+    background: linear-gradient(90deg, rgb(10, 33, 59) 0%, rgb(6, 75, 161) 100%);
     border-radius: 100px;
     font-size: 1em;
     padding: .3em;
 }
-.location{
-    padding: .5em .6em;
-}
-.type{
+
+.type {
     border: none;
     background: none;
     padding-left: 2em;
-    font-size: 1.2em;
-    color: #fff;
+    font-size: 1em;
     outline: none;
 }
-.button-container{
-    background-color: #313438;
+
+.button-container {
     padding: 2em 3.5em;
     color: #fff;
 }
-.update-contact{
+
+.update-contact {
     display: flex;
-    color: #fff;
-    width: 90%;
-    margin: 0 auto;
     align-items: center;
-    padding: 1em 2em;
     border-radius: 20px;
-    box-shadow:  6px 6px 12px #2d2f33,
-    -6px -6px 12px #35393d;
+    justify-content: space-between;
 }
-.button{
-    background:none ;
-    border:none;
+
+.update-contact .button {
+    width: 70px;
+    height: 35px;
+    background: #0a1d38;
+    border: none;
+    border-radius: 10px;
     color: #fff;
     font-size: 1.3em;
+    outline: none;
+    cursor: pointer;
+}
+
+.button {
+    background: none;
+    border: none;
+    color: #0a213b;
+    font-size: 1em;
     padding-left: .6em;
     outline: none;
     cursor: pointer;
+}
+
+@media only screen and (min-width: 800px) {
+    .back-btn {
+        font-size: 1.9em;
+        padding-left: 1em;
+    }
+
+    .contact-info {
+        margin-top: -4px;
+        padding: 1.5em;
+        background-color: #e8dede;
+        border-radius: 8px;
+        height: 99vh;
+    }
+
+    .info-line {
+        width: fit-content;
+        padding: 1em 2em;
+        margin-top: 4em;
+    }
+
+    .icon-gradient {
+        font-size: 1.3em;
+    }
+
+    .type {
+        font-size: 1.2em;
+    }
+
+    .update-contact .button {
+        width: 100px;
+        height: 40px;
+        font-size: 1.3em;
+    }
 }

@@ -1,3 +1,7 @@
+body {
+    background-color: #f3efef;
+}
+
 .container {
     min-width: 400px;
     max-width: 500px;
@@ -8,8 +12,7 @@
 
 .header {
     text-align: center;
-    color: #fff;
-    background: linear-gradient(90deg, rgb(216, 227, 218) 0%, rgb(193, 210, 167) 100%);
+    background: linear-gradient(90deg, rgb(241, 232, 232) 0%, rgb(241, 229, 229) 100%);
     padding: 1em 0 3em;
     align-items: center;
     border-radius: 5px;
@@ -19,7 +22,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 10px 0 15px;
+    margin: 0 10px -15px 15px;
+    padding-top: 5px;
+}
+.add{
+    color: #0a1d38;
+    font-size: 36px;
 }
 
 .search-container {
@@ -46,8 +54,8 @@
 }
 
 .search-box:hover input {
-    width: 350px;
-    background: #75A85E;
+    width: 250px;
+    background: #0a213b;
     border-radius: 10px;
 }
 
@@ -67,7 +75,7 @@
     z-index: -1;
 }
 
-.dot {
+.person-backGround {
     height: 55px;
     width: 55px;
     background-color: #ffffff;
@@ -76,12 +84,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    color: black;
 }
 
 .contact-name {
-    color: #fff;
+    color: #000000;
     font-size: 1.2em;
 }
 
@@ -104,7 +110,7 @@ ul {
     text-align: center;
     padding: .4em .5em;
     border-radius: 100px;
-    background-color: #75A85E;
+    background-color: rgb(10, 29, 56);
     margin-top: 8px;
     margin-bottom: 10px;
     cursor: default;
@@ -126,15 +132,16 @@ ul {
 .contacts-list {
     border-radius: 10px;
     margin: 2px;
-    background-color: #2d3541;
+    background-color: #ccd0dc;
+    transition: .5s;
 }
 
 .contacts-list:nth-child(odd) {
-    background-color: #333d52;
+    background-color: #b6bbc9;
 }
 
 .contacts-list:hover {
-    background-color: #464849;
+    background-color: #989fb0;
 }
 
 @media only screen and (min-width: 800px) {
@@ -152,6 +159,12 @@ ul {
         margin-bottom: 0;
     }
 
+    .search-box:hover input {
+        width: 350px;
+        background: #0a213b;
+        border-radius: 10px;
+    }
+
     .input {
         width: 50px;
         height: 50px;
@@ -164,6 +177,7 @@ ul {
     .title {
         margin-top: -40px;
     }
+
     .info {
         width: 35px;
     }

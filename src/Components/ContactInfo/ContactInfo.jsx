@@ -11,7 +11,9 @@ const ContactInfo = () => {
                 <i className="fas fa-chevron-circle-left back-btn">{}</i>
             </Link>
             <div className="person-info">
-                <span className="pic">{user.fullName.split('')[0]}</span>
+                <span className="pic">
+                    <img src={`https://avatars.dicebear.com/api/micah/male/:${user.id}.svg`} alt={user.fullName}/>
+                </span>
                 <h1>{user.fullName}</h1>
                 <hr/>
                 <div className="info-button-container">

@@ -1,5 +1,5 @@
 import {createContext, useReducer} from "react";
-import {contactUsersList} from "../data";
+import {initialData} from "../data";
 import {Reducer} from "./Reducer";
 
 export const ContactUsersContext = createContext({
@@ -7,12 +7,11 @@ export const ContactUsersContext = createContext({
 })
 
 function ContactContextProvider({children}) {
-    const [users, dispatch] = useReducer(Reducer,contactUsersList.sort())
+    const [users, dispatch] = useReducer(Reducer,initialData)
     return (
         <ContactUsersContext.Provider value={{users, dispatch}}>
             {children}
         </ContactUsersContext.Provider>
     )
 }
-
 export default ContactContextProvider;

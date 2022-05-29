@@ -5,7 +5,7 @@ export const ContactMoodContext = createContext({
 })
 
 function MoodContextProvider({children}) {
-    const [mood,setMood]=useState("Add Contact")
+    const [mood,setMood]=useState("Add")
     return (
         <ContactMoodContext.Provider value={{mood,setMood}}>
             {children}
